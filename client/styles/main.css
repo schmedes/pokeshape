@@ -41,6 +41,14 @@ html {
 body * + * {
   margin-top: 1.5em;
 }
+@keyframes rot {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
 
 .shape-wrapper {
     position: relative;
@@ -52,9 +60,11 @@ body * + * {
     margin: 0 auto;
     height: 100%;
     width: 700px;
+    
 }
 .darken {
     filter: brightness(0);
+    animation: rot 2s infinite linear;
 }
 .filter {
     position: absolute;

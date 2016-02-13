@@ -26,7 +26,6 @@ function getPokemon() {
 }
 
 function renderImage(pokemonId) {
-  image.style = 'transform: rotate('+ Math.random() * 360 + 'deg);'
   image.src = `../assets/${pokemonId}.png`;
 }
 

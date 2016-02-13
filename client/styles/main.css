@@ -48,12 +48,10 @@ body * + * {
     width: 100%;
 }
 .shape {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    display: block;
+    margin: 0 auto;
     height: 100%;
-    max-width: 700px;
+    width: 700px;
 }
 .darken {
     filter: brightness(0);

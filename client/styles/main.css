@@ -64,7 +64,7 @@ body * + * {
 }
 .darken {
     filter: brightness(0);
-    animation: rot 2s infinite linear;
+    animation: rot 1s infinite linear;
 }
 .filter {
     position: absolute;

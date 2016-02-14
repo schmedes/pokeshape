@@ -39,7 +39,7 @@ guess.addEventListener('keypress', (event)=>{
            setTimeout(()=>{
            image.classList.toggle('darken');
            renderImage(getPokemon()); 
-           }, 3000);
+           }, 2000);
            event.target.value = "";
        }
    } 

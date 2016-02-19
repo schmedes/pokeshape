@@ -1,3 +1,6 @@
+$primary-color: #C30001;
+$border-color: #750302;
+
 html {
   font-family: "Roboto", sans-serif;
   font-size: 25px;
@@ -60,7 +63,7 @@ body * + * {
     margin: 0 auto;
     height: 100%;
     width: 700px;
-    
+
 }
 .darken {
     filter: brightness(0);
@@ -88,7 +91,7 @@ header {
     margin-left: auto;
     margin-right: auto;
     justify-content: space-between;
-    
+
 }
 .score-board {
     margin-top: 0;

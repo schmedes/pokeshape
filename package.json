@@ -25,9 +25,9 @@
     "babel-register": "^6.5.2",
     "cross-env": "^1.0.7",
     "css-loader": "^0.23.1",
-    "eslint": "^2.1.0",
-    "eslint-config-airbnb": "^5.0.1",
-    "eslint-plugin-react": "^3.16.1",
+    "eslint": "^2.2.0",
+    "eslint-config-airbnb": "^6.0.2",
+    "eslint-plugin-react": "^4.1.0",
     "expect": "^1.14.0",
     "file-loader": "^0.8.5",
     "imagemin-cli": "^2.1.0",
@@ -35,12 +35,12 @@
     "mocha": "^2.4.5",
     "path": "^0.12.7",
     "postcss-loader": "^0.8.0",
-    "postcss-mixins": "^4.0.0",
+    "postcss-mixins": "^4.0.1",
     "postcss-nested": "^1.0.0",
     "postcss-simple-vars": "^1.2.0",
     "rimraf": "^2.5.2",
     "style-loader": "^0.13.0",
-    "webpack": "^1.12.13",
+    "webpack": "^1.12.14",
     "webpack-dev-server": "^1.14.1"
   }
 }

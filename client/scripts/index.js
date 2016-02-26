@@ -4,7 +4,6 @@ let pokemonLeft = [];
 const image = document.querySelector('.shape');
 const guess = document.querySelector('#guess');
 const score = document.querySelector('.score');
-let pokedex = pokedexDE;
 
 function renderImage(pokemonId) {
   image.src = `../assets/${pokemonId}.png`;
@@ -28,9 +27,11 @@ function initGame() {
   }
   renderImage(getPokemon());
 }
+
 guess.addEventListener('keypress', (event) => {
   if (event.which === 13) {
-    if (pokedex[image.src.split('/').pop().split('.').shift()] === guess.value.toUpperCase()) {
+    if (pokedexEN[image.src.split('/').pop().split('.').shift()] === guess.value.toUpperCase() ||
+      pokedexDE[image.src.split('/').pop().split('.').shift()] === guess.value.toUpperCase()) {
       image.classList.toggle('darken');
       score.innerHTML = parseInt(score.innerHTML, 10) + 1;
       setTimeout(() => {

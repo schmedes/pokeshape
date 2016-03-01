@@ -27,19 +27,17 @@
 
 <body>
     <header>
-        <h1>Errate das Pokemon!</h1><div class="score-board">Score:  <span class="score">0</span></div></header>
+        <h1>Guess the Pokemon!</h1><div class="score-board">Score:  <span class="score">0</span></div></header>
     <main>
         <div class="shape-wrapper">
             <div class="filter"></div>
-            <img class="shape darken" src="" alt="Pokemon image" />
+            <img class="shape darken" src="" alt="Pokemon image" />            
         </div>
-        <div class="guess-box">
-        <label for="guess">Welches Pokemon ist das?</label>
-        <input id="guess" type="text" name="guess"></div>
+        <input class="guess-box" id="guess" type="text" name="guess" placeholder="Which Pokemon is it?">
     </main>
     <footer></footer>
     <script src="./main.js" charset="utf-8"></script>
-    <!-- Google Analytics 
+    <!-- Google Analytics
     <script>
         (function(i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r;

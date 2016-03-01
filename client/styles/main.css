@@ -58,12 +58,15 @@ html {
     background-color: #DEDEDE;
     border-radius: 10px;
     border: 10px solid #727474;
+    overflow: hidden;
 
 }
 .shape {
     display: block;
     margin: 0 auto;
     width: 100%;
+    overflow: hidden;
+    max-height: 600px;
 
 }
 .darken {
@@ -130,4 +133,16 @@ header {
 body {
   background-color: #EEEDED;
   overflow: hidden;
+}
+
+.guessed {
+  position: absolute;
+  top: 90%;
+  width: 100%;
+  text-align: center;
+  color: red;
+}
+
+.right {
+  color: green;
 }

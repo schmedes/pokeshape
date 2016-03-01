@@ -3,13 +3,22 @@ import Game from './game.js';
 const image = document.querySelector('.shape');
 const guess = document.querySelector('#guess');
 const score = document.querySelector('.score');
+const guessResult = document.querySelector('.guessed');
 
-function updateUI(newscore, newimage) {
+function updateUI(newscore, newimage, guessedPokemon, guessed) {
   image.classList.toggle('darken');
   score.innerHTML = newscore;
+  if (guessedPokemon) {
+    guessResult.innerHTML = guessedPokemon;
+    if (guessed) {
+      guessResult.classList.add('right');
+    }
+  }
   setTimeout(() => {
     image.classList.toggle('darken');
     image.src = newimage;
+    guessResult.innerHTML = '';
+    guessResult.classList.remove('right');
   }, 2000);
   guess.value = '';
 }

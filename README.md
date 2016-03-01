@@ -2,8 +2,7 @@
 
 ## TODO-List
 
-- styling
-- adding timer
+- responsive Design
+- better header
 - adding failure message
-- adding hints from pokeapi.co
 - adding share-buttons to share their score

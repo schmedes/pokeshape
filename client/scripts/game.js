@@ -31,12 +31,15 @@ export default class Game {
     }
   }
   checkPokemon(pokemonNr, guess, cb) {
+    let guessedCorrect = false;
+    const guessedPokemon = `${pokedexEN[this.currentPokemon - 1]} / ${pokedexDE[this.currentPokemon - 1]}`;
     if (pokedexDE[pokemonNr - 1] === guess || pokedexEN[pokemonNr - 1] === guess) {
       this.score += 1;
+      guessedCorrect = true;
     }
     this.currentPokemon = this.getPokemon(this.pokemonLeft);
     if (cb) {
-      cb(this.score, this.renderImage(this.currentPokemon));
+      cb(this.score, this.renderImage(this.currentPokemon), guessedPokemon, guessedCorrect);
     }
   }
 }

@@ -2,6 +2,13 @@
 
 ## TODO-List
 
-- responsive Design
 - better scoredesign
 - cleanup code
+- cleanup css
+- add more test
+
+## To run this
+
+1. clone repo
+1. npm install
+1. npm start

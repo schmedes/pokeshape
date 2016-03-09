@@ -1,4 +1,4 @@
-$primary-color: #DC0A2D;
+$primary-color: #B71C1C;
 $border-color: #750302;
 
 html {
@@ -15,14 +15,19 @@ html {
   margin: 0;
   padding: 0;
 }
-@media all and (max-width: 1000px) {
+@media all and (max-width: 500px) {
   html {
-    font-size: 20px;
+    font-size: 15px;
   }
 }
 @media all and (max-width: 710px) {
-  html {
-    font-size: 17px;
+  main {
+    width: 100% !important;
+    margin: 0;
+  }
+  header {
+    width: 100% !important;
+    margin: 0;
   }
 }
 
@@ -42,8 +47,9 @@ html {
     margin-right: auto;
     background-color: #DEDEDE;
     border-radius: 10px;
-    border: 10px solid #727474;
+    border: 5px solid #616161;
     overflow: hidden;
+    height: 60vh;
 
 }
 .shape {
@@ -72,6 +78,7 @@ html {
 }
 .hidden {
   opacity: 0;
+  height: 100%;
 }
 
 main {
@@ -92,6 +99,7 @@ header {
     margin-right: auto;
     justify-content: space-around;
     background-color: $primary-color;
+    color: #DEDEDE;
 
     h1 {
       font-size: 1.5em;
@@ -102,9 +110,9 @@ header {
     margin-top: 0.5em;
 }
 .guess-box {
-    width: 90%;
+    width: 85%;
     text-align: center;
-    margin-top: 20%;
+    margin-top: 15%;
     height: 5vh;
     background-color: #51AE5F;
     color: #000;

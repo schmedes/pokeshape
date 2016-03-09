@@ -41,6 +41,7 @@ export default class Game {
     }
     this.currentPokemon = this.getPokemon(this.pokemonLeft);
     if (cb) {
+      if (!this.currentPokemon) guessedCorrect = false;
       cb(this.score, this.renderImage(this.currentPokemon), guessedPokemon, guessedCorrect);
     }
   }

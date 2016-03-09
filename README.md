@@ -4,5 +4,4 @@
 
 - responsive Design
 - better scoredesign
-- remove delay
 - cleanup code

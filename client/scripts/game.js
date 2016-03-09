@@ -28,7 +28,7 @@ export default class Game {
     this.currentPokemon = this.getPokemon(this.pokemonLeft);
 
     if (cb) {
-      cb(this.score, this.renderImage(this.currentPokemon), 0, true);
+      cb(this.score, this.renderImage(this.currentPokemon));
     }
   }
   checkPokemon(pokemonNr, guess, cb) {

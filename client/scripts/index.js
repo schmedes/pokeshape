@@ -24,17 +24,25 @@ function updateUI(newscore, newimage, guessedPokemon, guessed) {
       guessResult.innerHTML = '';
       guessResult.classList.remove('right');
     }, 2000);
-    guess.value = '';
   } else {
     endResult.innerHTML = `Congratulations you got ${newscore} points`;
     resultScreen.classList.remove('hidden');
   }
+  guess.value = '';
+}
+
+function initUI(newscore, newimage) {
+  image.classList.toggle('darken');
+  resultScreen.classList.add('hidden');
+  guessResult.classList.remove('right');
+  guessResult.innerHTML = '';
+  score.innerHTML = newscore;
+  image.src = newimage;
 }
 
 const pokemonGame = new Game();
 
-pokemonGame.initGame(updateUI);
-resultScreen.classList.add('hidden');
+pokemonGame.initGame(initUI);
 
 guess.addEventListener('keypress', (event) => {
   if (event.which === 13) {
@@ -43,9 +51,7 @@ guess.addEventListener('keypress', (event) => {
   }
 });
 
+
 retryButton.addEventListener('click', () => {
-  image.classList.toggle('darken');
-  pokemonGame.initGame(updateUI);
-  resultScreen.classList.add('hidden');
-  guessResult.classList.remove('right');
+  pokemonGame.initGame(initUI);
 });

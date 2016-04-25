@@ -6,9 +6,11 @@ export default class Game {
     this.score = 0;
     this.currentPokemon = '';
   }
+  // get link to new image
   renderImage(pokemonId) {
     return `../assets/${pokemonId}.png`;
   }
+  // try to fetch random pokemon out of list
   getPokemon(pokemonLeft) {
     if (pokemonLeft) {
       const pokemonNr = Math.floor(Math.random() * (pokemonLeft.length - 1));
@@ -19,9 +21,11 @@ export default class Game {
     }
     return false;
   }
+
   initGame(cb) {
     this.score = 0;
     this.pokemonLeft = [];
+    // fill the pokemon array
     for (let it = 1; it <= 151; it++) {
       this.pokemonLeft.push(it);
     }
@@ -31,6 +35,7 @@ export default class Game {
       cb(this.score, this.renderImage(this.currentPokemon));
     }
   }
+
   checkPokemon(pokemonNr, guess, cb) {
     let guessedCorrect = false;
     const guessedPokemon =

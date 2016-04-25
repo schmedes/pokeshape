@@ -1,5 +1,7 @@
 require('../styles/main.css');
 import Game from './game.js';
+
+// get reference to DOM nodes
 const image = document.querySelector('.shape');
 const guess = document.querySelector('#guess');
 const score = document.querySelector('.score');
@@ -13,11 +15,13 @@ function updateUI(newscore, newimage, guessedPokemon, guessed) {
   score.innerHTML = newscore;
   if (guessedPokemon) {
     guessResult.innerHTML = guessedPokemon;
+    // on correct guess, display green text
     if (guessed) {
       guessResult.classList.add('right');
     }
   }
   if (guessed) {
+    // after delay update image and reset guess
     setTimeout(() => {
       image.classList.toggle('darken');
       image.src = newimage;
@@ -25,6 +29,7 @@ function updateUI(newscore, newimage, guessedPokemon, guessed) {
       guessResult.classList.remove('right');
     }, 2000);
   } else {
+    // on wrong guess display endscreen
     endResult.innerHTML = `Congratulations you got ${newscore} points`;
     resultScreen.classList.remove('hidden');
   }

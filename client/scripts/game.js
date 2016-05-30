@@ -8,7 +8,7 @@ export default class Game {
   }
   // get link to new image
   renderImage(pokemonId) {
-    return `../assets/${pokemonId}.png`;
+    return `http://pokeapi.co/media/img/${pokemonId}.png`;
   }
   // try to fetch random pokemon out of list
   getPokemon(pokemonLeft) {
